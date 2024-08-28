@@ -1,46 +1,74 @@
 .iframeWindow {
     position: absolute;
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     border: 0;
     padding: 0;
     margin: 0;
     left: 0;
     bottom: 0;
     background-color: #141414;
+    z-index: 99999;
 }
 
-#urlInput {
-    position: absolute;
-    padding: 0em;
-    padding-left: 0.5em;
+body {
     margin: 0;
-    left: 0;
-    top: 0;
-    width: 80vw;
-    height: 10vh;
-    border: 0;
-    outline: 0;
-    color: aliceblue;
-    background-color: #25252a;
-    font-size: 5vh;
+    padding: 0;
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #2c2c2c;
+    border-radius: 5px;
+    transition: width 0.3s ease, padding 0.3s ease;
+    padding: 5px;
+}
+
+#searchInput {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    width: 400px;
+    background-color: #333;
+    color: #fff;
+    transition: width 0.3s ease;
 }
 
 #searchButton {
-    position: absolute;
-    margin: 0;
-    right: 0;
-    top: 0;
-    width: 20vw;
-    height: 10vh;
-    border: 0;
-    outline: 0;
-    color: #141414;
-    background-color: aliceblue;
-    font-size: 5vh;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    background-color: #009688;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: background-color 0.3s ease;
 }
 
-#switcher {
-    position: absolute;
-    z-index: 999;
+#searchButton:hover {
+    background-color: #00796b;
+}
+
+.search-box.expanded #searchInput {
+    width: 600px;
+}
+
+.search-box.expanded {
+    padding: 5px;
 }
